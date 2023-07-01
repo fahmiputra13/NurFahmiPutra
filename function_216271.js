@@ -5,10 +5,10 @@ var body = document.body;
 toggleButton.addEventListener("change", function () {
   if (toggleButton.checked) {
     body.style.backgroundImage =
-      "url('gambar/yasaka-pagoda-sannen-zaka-street-kyoto-japan.jpg')";
+      "url('yasaka-pagoda-sannen-zaka-street-kyoto-japan.jpg')";
   } else {
     body.style.backgroundImage =
-      "url('gambar/yasaka-pagoda-sannen-zaka-street-kyoto-japan1.jpg')";
+      "url('yasaka-pagoda-sannen-zaka-street-kyoto-japan1.jpg')";
   }
 });
 
