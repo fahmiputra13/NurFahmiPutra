@@ -1,0 +1,134 @@
+<!--
+    Author: NUR FAHMI PUTRA BIN NOR IHSAN
+    Matric Number: 216271
+    University: Universiti Putra Malaysia (UPM)
+    Course: Bachelors of Computer Science (Multimedia Computing) with Honors.
+
+    Task:
+    Need to create an application to solve Gaussian Elimination. User will input data and the system will output:
+    1. Have solution or not?
+    2. If have, then the output will ComeOut.
+    3. Then, system will output inverse function based on situation. It is because no all matrix can have inverse matrix. If it's not suitable input to run for inverse ouput, hence the system will output No inverse matrix.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fahmi Putra" />
+    <meta
+      name="description"
+      content="This page contains Gaussian Elimination Calculator to solve all type and find inverse."
+    />
+    <title>Gaussian Elimination Calculate System</title>
+    <link rel="icon" href="gambar/accounting.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style_216271.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="gambar/upm-new-logo-6911DC0B99-seeklogo.com.png"
+          alt="upm logo"
+          title="UPM logo"
+          width="240"
+          height="120"
+        />
+
+        <img
+          src="gambar/logoCSITnoBackground.png"
+          alt="FSKTM logo"
+          title="FSKTM UPM Logo"
+          width="240"
+          height="120"
+        />
+      </div>
+    </nav>
+
+    <!-- Bahagian Theme Button Sahaja-->
+    <h1>
+      <div class="theme">Theme</div>
+      <div class="toggle_animation">
+        <label class="switch">
+          <input type="checkbox" id="toggleButton" class="input__check" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </h1>
+
+    <!-- Bahagian Title -->
+    <h2 class="title">Gaussian Elimination Calculate System</h2>
+
+    <h3>
+      <!-- Background Hitam Belakang Title -->
+      <div class="rectangle"></div>
+
+      <!-- Bahagian prompt nak Start System-->
+      <div class="Prompt" id="Prompt">
+        <br />
+        <p>->-> System Open <-<-</p>
+        <p>Gaussian Elimination And Inverse Algorithm Test</p>
+        <br />
+        <br />
+        <br />
+      </div>
+    </h3>
+
+    <button type="button" id="toggleButton2" class="startBtn">
+      <span>Solve</span>
+    </button>
+    <div id="targetElement2" style="display: none">
+      <div id="page" class="solve">
+        <!-- HTML code to display the user interface -->
+        <label class="h2">Linear Equation Solver</label><br /><br /><br />
+
+        <label for="rowsInputLS" class="text"
+          >Enter the number of equations:</label
+        >
+        <input type="number" id="rowsInputLS" class="custom-input2" />
+        <button id="generateFieldsBtn" class="button6">
+          <span>Next</span>
+        </button>
+
+        <div id="matrixInputLS" class="matrixInput"></div>
+        <div id="bInput"></div>
+
+        <button id="submitBtnSolve" class="button5">
+          <span>Calculate</span>
+        </button>
+
+        <div id="resultLS" class="result"></div>
+      </div>
+    </div>
+
+    <button type="button" id="toggleButton3" class="startBtn">
+      <span>Inverse</span>
+    </button>
+
+    <div id="targetElement" style="display: none" class="tElement">
+      <!-- Prompt Yg akan keluar bila Button Start Ditekan -->
+      <div id="page" class="inverse">
+        <br /><label class="h2">Choose size of matrix</label><br /><br />
+        <!-- Input fields for matrix dimensions -->
+        <label for="rowsInputM" class="textIn">Number of Rows:</label>
+        <input type="number" id="rowsInputM" class="custom-input1" /><br />
+
+        <label for="colsInputM" class="textIn">Number of Columns:</label>
+        <input type="number" id="colsInputM" class="custom-input1" />
+
+        <!-- Input fields for matrix elements -->
+        <div id="matrixInputM">
+          <!-- Matrix elements will be dynamically added here using JavaScript -->
+        </div>
+        <button id="submitBtn" class="button"><span>Get inverse</span></button
+        ><br /><br />
+        <div id="resultI" class="result"></div>
+        <br /><br />
+      </div>
+    </div>
+
+    <script src="function_216271.js"></script>
+  </body>
+</html>

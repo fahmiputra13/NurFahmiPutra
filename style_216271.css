@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  ---------------- Body Secara Umum ------------------  */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(gambar/yasaka-pagoda-sannen-zaka-street-kyoto-japan1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 15px 20px;
+  display: flex;
+  margin: 1%;
+  justify-content: right;
+  align-items: center;
+  color: azure;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  animation: toggle__animation 3s infinite;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  filter: blur(20px);
+  z-index: -1;
+  border-radius: 50px;
+  background-color: #d8ff99;
+  background-image: radial-gradient(
+      at 21% 46%,
+      hsla(183, 65%, 60%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 23% 25%, hsla(359, 74%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 20% 1%, hsla(267, 83%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 86% 87%, hsla(204, 69%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 99% 41%, hsla(171, 72%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 55% 24%, hsla(138, 60%, 62%, 1) 0px, transparent 50%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fdfefedc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.3em;
+  bottom: 0.35em;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 10px 0px inset,
+    rgba(0, 0, 0, 0.09) 0px -1px 15px -8px;
+  background-color: #ff99fd;
+  background-image: radial-gradient(
+      at 81% 39%,
+      hsla(327, 79%, 79%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 11% 72%, hsla(264, 64%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 20%, hsla(75, 98%, 71%, 1) 0px, transparent 50%);
+}
+
+.input__check:checked + .slider {
+  background-color: #17202a;
+}
+
+.input__check:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+@keyframes toggle__animation {
+  0%,
+  100% {
+    transform: translateY(-10px) rotateX(15deg) rotateY(-20deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotateX(15deg) rotateY(-20deg);
+  }
+}
+
+h2.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  position: relative;
+  font-size: 60px;
+  transform: translateY(10px);
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: -2000px, 0;
+  animation: backcolor 5s linear infinite alternate;
+}
+
+@keyframes backcolor {
+  100% {
+    background-position: 10%;
+  }
+}
+
+/* ----------------------------------------------- */
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  height: 100px;
+  width: 1500px;
+  border-radius: 30px;
+  background-color: #000;
+  display: block;
+  top: 35%;
+  opacity: 70%;
+  position: absolute;
+  z-index: -1;
+}
+
+.Prompt {
+  width: 700px;
+  background: #fff;
+  opacity: 90%;
+  border-radius: 20px;
+  transform: translate(-515px, 40px);
+  position: absolute;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px 30;
+  font-size: 25px;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #b31312;
+  color: ghostwhite;
+  justify-content: center;
+  align-items: center;
+  transform: translate(320px, 60px);
+}
+
+button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+button:hover span {
+  color: black;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.startBtn1 {
+  transform: translateX(-100px);
+}
+/* -----------------------------------------------------*/
+
+.form-box {
+  color: #fff;
+  position: absolute;
+  top: 67%;
+  left: 5%;
+  width: 900px;
+  padding: 30px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inverse {
+  color: #fff;
+  position: absolute;
+  top: 66%;
+  left: 5%;
+  width: 700px;
+  padding: 30px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.result {
+  color: #fff;
+}
+
+.solve {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 1000px;
+  padding: 30px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.button6 {
+  transform: translate(80px, -10px);
+}
+
+.button5 {
+  transform: translate(650px, -60px);
+}
+.custom-inputB {
+  transform: translate(400px, -36px);
+}
