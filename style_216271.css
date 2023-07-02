@@ -301,5 +301,10 @@ button:hover::before {
   transform: translate(650px, -60px);
 }
 .custom-inputB {
-  transform: translate(400px, -36px);
+  width: 10%;
+  transform: translate(0px, 30px);
+}
+
+.custom-input2 {
+  width: 10%;
 }
